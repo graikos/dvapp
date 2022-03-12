@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url("../fonts/SourceSansPro-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url("../fonts/SourceSansPro-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url("../fonts/SourceSansPro-Italic.ttf");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/SourceSansPro-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Italic.ttf");
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-SemiBold.ttf");
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Black.ttf");
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+.App {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.main {
+    display: inline-block;
+    width: 100%;
+    /*background-color:red;*/
+    top:0;
+    margin:0;
+    text-align: left;
+}
+
+.main-side {
+    width: 50%;
+    display: inline-block;
+    /*background-color:blue;*/
+    height: 100%;
+    height: 88vh;
+    top:0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tempref {
+    /*background-color:green;*/
+}
+
+.tempref::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 2px;
+    height: 40%;
+    top: 30%;
+    background-color: #ff4365;
+    left: -1px;
+}
+
+.main-side-header {
+    font-family: "Poppins", sans-serif;
+    color: #241623;
+    font-size: 27px;
+    font-weight: 400;
+    /*background-color:red;*/
+    margin-top: 30vh;
+    margin-bottom: 20px;
+    line-height: 50px;
+}
+
+
+.register-form {
+    /*background-color:red;*/
+    margin: 0;
+    text-align: center;
+    display: block;
+    align-content: center;
+}
+
+.name-field {
+    outline: none;
+    min-width: 200px;
+    width: 30%;
+    font-family: 'Poppins', sans-serif;
+    border: solid 1px #241623;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 16px;
+    line-height: 35px;
+    margin-bottom: 16px;
+    transition: all .25s;
+}
+
+.name-field:focus {
+    border: solid 1px #ff4365;
+}
+
+
+.register-button {
+    line-height: 35px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    margin: 0;
+    outline: none;
+    text-align: center;
+    width: 120px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #ff4365;
+    font-weight: 400;
+    border: solid 1px #ff4365;
+    transition: all .25s;
+}
+
+
+.register-button:hover {
+    background-color: #ff4365;
+    color: white;
+}
+
+.header-loading {
+    color: #b5b5b5;
+}
+
+.please-connect {
+    color: #b5b5b5;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    margin:0;
+    position: absolute;
+    left:0;
+    line-height: 200px;
+    top:calc(50vh - 100px);
+}
+
+.black-connect {
+    animation-name: fadeOut;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes toggleFade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        visibility: collapse;
+        top: -30px;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    }
+}
+
+
+
+.main-side-animation {
+    animation-name: fadeIn;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
+.loading-message {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    position: absolute;
+    top:10vh;
+    width: 100%;
+    text-align: center;
+    color: #ababab;
+    animation-name: toggleFade;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.results-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #241623;
+}
+
+.results-text span {
+    color: #ff4365;
+}
+
+.register-loading {
+    cursor: not-allowed;
+}
+.register-loading:hover {
+    background-color: #ffffff;
+    color: #ff4365;
+    font-weight: 400;
+    border: solid 1px #ff4365;
+    transition: all .25s;
+}
+
+.register-loading span {
+    animation-name: toggleFadeRegister;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes toggleFadeRegister {
+    0% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+.vote-header {
+    margin-top:20vh;
+}
+
+.candidates-list {
+    align-items: center;
+    padding:0;
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    max-height: 20vh;
+    overflow-y: visible;
+    width: 50%;
+}
+
+.candidate-element {
+    cursor:pointer;
+    display: block;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color:#241623;
+    line-height: 50px;
+    border-radius: 3px;
+    margin: 5px;
+    z-index: 0;
+    transition: all .2s;
+}
+.candidate-element:hover {
+    z-index: 1;
+    background-color: #f3f3f3;
+    transition: all .2s;
+}
+
+.candidate-element span {
+    position: relative;
+    left:0;
+    transition: all .2s;
+}
+
+.candidate-element:hover span {
+    left:5px;
+    color:#ff4365;
+}
+
+.candidate-element::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width: 2px;
+    background-color: #cbcbcb;
+    transition: all .2s;
+}
+
+.candidate-element:hover::after {
+    background-color:#ff4365;
+    width:4px;
+}
+
+.candidate-element::before {
+    content: 'Vote for: ';
+    position: absolute;
+    line-height: 50px;
+    left:2%;
+    opacity: 0;
+    font-weight: 300;
+    transition: all .2s;
+}
+
+.candidate-element:hover::before {
+    opacity: 1;
+    left:5%;
+}
+
+.voted-for {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color:#ff4365;
+    font-size: 30px;
+}
+
